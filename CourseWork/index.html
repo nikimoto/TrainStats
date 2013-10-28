@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="utf-8" />
+    <title>Team Feijoa</title>
+    <script src="script/web-storage-objects.js"></script>
+    <script src="script/jquery-1.10.1.min.js"></script>
+    <script src="script/parsley.js"></script>
+    <script src="script/class.js"></script>
+    <script src="script/parsley.js"></script>
+    <script src="jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
+    <script src="jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <link href="jquery-ui-1.10.3.custom/css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <link href="style/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="images/logo.png" width="245" height="39" />
+            <form id="foms">
+                <button>Login</button>
+                <button>Register</button>
+            </form>
+        </header>
+        <section id="content">
+            <ul>
+                <li><a href="#infoTab">Info</a></li>
+                <li><a href="#profileTab">Profile</a></li>
+                <li><a href="#workoutTab">Workouts</a></li>
+                <li><a href="#hystoryTab">History</a></li>
+                <li><a href="#registerTab">Register</a></li>
+                <li><a href="#loginTab">Log In</a></li>
+            </ul>
+            <div id="infoTab">
+                <h2>Info: </h2>
+                <p>Tem Feijoa. This is our application called TrainStat.</p>
+                <p>Members:</p>
+                <ul>
+                    <li>Aleksander Todorov
+                    </li>
+                    <li>Alexander Zlatkov
+                    </li>
+                    <li>Joan Dinkov
+                    </li>
+                    <li>Nikolay Kutlev
+                    </li>
+                    <li>Spas Mihaylov
+                    </li>
+                </ul>
+
+                <img src="images/feijoas.jpg" width="200" height="200" />
+            </div>
+            <div id="profileTab">
+                <div id="profile">
+                    <h2>Profile: </h2>
+                    <img src="http://placehold.it/150x150" />
+                </div>
+                <script>function fbs_click() { u = location.href; t = document.title; window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436'); return false; }</script>
+                <style>
+                    html .fb_share_link {
+                        padding: 2px 0 0 20px;
+                        height: 16px;
+                        background: url(http://static.ak.facebook.com/images/share/facebook_share_icon.gif?6:26981) no-repeat top left;
+                    }
+                </style>
+                <a rel="nofollow" href="http://www.facebook.com/share.php?u=<;url>" onclick="return fbs_click()" target="_blank" class="fb_share_link">Share on Facebook</a>
+            </div>
+            <div id="loginTab">
+                <div id="login">
+                    <h2>Log In: </h2>
+                    <label for="userName">Name</label>
+                    <input type="text" id="userName" />
+                    <button id="logInBtn">Log In</button>
+                </div>
+            </div>
+            <div id="workoutTab">
+                <div id="excercisesMenu">
+                    <h3>Cardio Exercises</h3>
+                    <div id="cardioEx">
+                        <div id="runningEx">
+                            <img src="images/running.jpg" alt="runningEx" class="exercises" />
+                            <label for="runningEx">Running</label>
+                        </div>
+                        <div id="cyclingEx">
+                            <img src="images/cycling.jpg" alt="cyclingEx" class="exercises" />
+                            <label for="cyclingEx">Cycling</label>
+                        </div>
+                        <div id="ropeJumpingEx">
+                            <img src="images/ropeJumping.jpg" alt="ropeJumpingEx" class="exercises" />
+                            <label for="ropeJumpingEx">Rope Jumping</label>
+                        </div>
+                    </div>
+                    <h3>Power Exercises</h3>
+                    <div id="powerEx">
+                        <div id="benchpressEx">
+                            <img src="images/benchPress.jpg" alt="powerEx" class="exercises" />
+                            <label for="benchpressEx">Bench Press</label>
+                        </div>
+                        <div id="deadliftEx">
+                            <img src="images/deadLift.jpg" alt="deadliftEx" class="exercises" />
+                            <label for="deadliftEx">Dead Lift</label>
+                        </div>
+                        <div id="squatEx">
+                            <img src="images/squat.jpg" alt="squatEx" class="exercises" />
+                            <label for="squatEx">Squat</label>
+                        </div>
+                    </div>
+                </div>
+                <button id="addWorkoutBtn">AddWorkout</button>
+            </div>
+            <div id="hystoryTab">
+                <h2>Workout Hystory: </h2>
+            </div>
+            <div id="registerTab">
+                <h2>Registration Form: </h2>
+                <form id="register-form" data-validate="parsley">
+                    <label for="fullname">Full Name<a href="#" tabindex="-1" class="sup-required" title="This field is required">*</a>:</label>
+                    <input type="text" id="fullname" name="fullname" data-required="true" title="Type your name." />
+                    <br />
+                    <label for="age">Age<a href="#" tabindex="-1" class="sup-required" title="This field is required">*</a>:</label>
+                    <input type="text" id="age" name="age" data-trigger="change" data-required="true" data-type="number" data-min="0" data-max="100" title="Type your age." />
+                    <br />
+                    <label for="height">Height<a href="#" tabindex="-1" class="sup-required" title="This field is required">*</a>:</label>
+                    <input type="text" id="height" name="height" data-trigger="change" data-required="true" data-type="number" data-min="100" data-max="230" title="Type your height." />
+                    <br />
+                    <label for="weight">Weight<a href="#" tabindex="-1" class="sup-required" title="This field is required">*</a>:</label>
+                    <input type="text" id="weight" name="weight" data-trigger="change" data-required="true" data-type="number" data-min="40" data-max="200" title="Type your weight." />
+                    <br />
+                    <input type="radio" id="male" name="sex" value="Male" data-required="true"><label for="male" class="gender">Male</label><br />
+                    <input type="radio" id="female" name="sex" value="Female" data-required="true"><label for="female" class="gender">Female</label><br />
+                </form>
+                <button id="ressetBtn">Resset</button>
+                <button id="submitBtn">Submit</button>
+            </div>
+        </section>
+        <footer id="footer">
+            <hr />
+            <p>Copyright &copy; Telerik Academy Team Feijoa 2013</p>
+        </footer>
+        <script src="script/TrainStat.js"></script>
+        <script src="script/siteController.js"></script>
+        <script src="script/UIApplier.js"></script>
+    </div>
+
+</body>
+</html>
